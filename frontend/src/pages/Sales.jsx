@@ -13,13 +13,11 @@ const fetchItems = (token) => {
         }
 
     };
-    return fetch('http://127.0.0.1:8000/api/itemsUserItems', requestOptions)
+    return fetch('/api/itemsUserItems', requestOptions)
         .then(response => response.json())
 
 };
-/*const fetchItems = () => {
-    return fetch(`http://127.0.0.1:8000/api/items`).then((res) => res.json());
-};*/
+
 const Sales = () => {
     const [loading, setLoading] = useState(true);
     const [items, setItems] = useState([]);

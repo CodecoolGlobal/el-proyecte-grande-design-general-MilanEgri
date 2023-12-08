@@ -19,7 +19,7 @@ const LogOutNavbar = ({ setIsLogined }) => {
             }
             
           };
-          fetch('http://127.0.0.1:8000/api/logout', requestOptions)
+          fetch('/api/logout', requestOptions)
           .then(response => response.json())
           .then(data => {
             setToken(null)

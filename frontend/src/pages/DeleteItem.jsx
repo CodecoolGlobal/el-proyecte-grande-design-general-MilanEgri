@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import {BiSolidErrorCircle} from "react-icons/bi";
 
 const fetchItem = (id) => {
-    return fetch(`http://127.0.0.1:8000/api/items/${id}`).then((res) => res.json());
+    return fetch(`/api/items/${id}`).then((res) => res.json());
 };
 
 const DeleteItem = () => {
@@ -39,7 +39,7 @@ const DeleteItem = () => {
             }
         };
 
-        fetch('http://127.0.0.1:8000/api/itemsUserItems/'  + id, requestOptions)
+        fetch('/api/itemsUserItems/'  + id, requestOptions)
             .then(response => response.json())
             .then(data => {
                 setSuccessVisibility('visible');

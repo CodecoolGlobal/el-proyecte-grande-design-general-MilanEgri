@@ -36,7 +36,7 @@ const NewItem = () => {
             body: JSON.stringify({ name: itemName, description: description, price:price })
         };
 
-        fetch('http://127.0.0.1:8000/api/itemsUserItems', requestOptions)
+        fetch('/api/itemsUserItems', requestOptions)
             .then(response => response.json())
             .then(data => {
                 setSuccessVisibility('visible');
